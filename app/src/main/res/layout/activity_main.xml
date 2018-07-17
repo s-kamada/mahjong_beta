@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.c.mahjong_beta.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextAppearance="@style/ToolbarTextAppearance" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="328dp"
+            android:columnCount="2">
+
+            <Switch
+                android:id="@+id/isDealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:checked="true"
+                android:showText="true"
+                android:text="@string/IsDealer"
+                android:textOff="子"
+                android:textOn="親"
+                android:textSize="24sp"
+                tools:checked="true" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="符数"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/fu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/fu" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="飜数"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/fan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/fan" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:text="@string/button_calcscore" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:text="点数"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/scoreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="5"
+                android:text="[points]"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fanFuView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="4"
+                android:text="[飜、符]"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/basicScoreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="6"
+                android:text="[basicScore]"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </GridLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
