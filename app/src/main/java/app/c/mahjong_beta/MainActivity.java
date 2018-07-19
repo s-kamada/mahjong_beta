@@ -1,8 +1,6 @@
 package app.c.mahjong_beta;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -11,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -25,30 +22,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
         final String TAG = "Calcscore";
-        /**TODO
+        /* TODO 手牌を入力すると点数計算までしてくれる状態にする
+         *　中目標：手牌を入力するフォーム？を作る
+         *　小目標：とりあえず牌の素材を入手する
+         *  BUGFIX:exportコマンドが動かない not a valid identifier
          */
 
 //        Spinner Sfu = (Spinner)findViewById(R.id.fu);
 
-        Button BcalcScore = (Button) findViewById(R.id.button2);
+        Button BcalcScore = findViewById(R.id.button2);
         BcalcScore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Spinner Sfan = (Spinner)findViewById(R.id.fan);
-                Spinner Sfu = (Spinner)findViewById(R.id.fu);
+                Spinner Sfan = findViewById(R.id.fan);
+                Spinner Sfu = findViewById(R.id.fu);
                 int fan = Integer.parseInt((String)Sfan.getSelectedItem());
                 int fu = Integer.parseInt((String)Sfu.getSelectedItem());
                 Log.i(TAG,"fan: "+fan+", fu: "+fu);
-                TextView scoreView = (TextView)findViewById(R.id.scoreView);
+                TextView scoreView = findViewById(R.id.scoreView);
                 TextView fanFuView = findViewById(R.id.fanFuView);
                 TextView basicScoreView = findViewById(R.id.basicScoreView);
 
-                final Switch SisDealer = (Switch)findViewById(R.id.isDealer);
+                final Switch SisDealer = findViewById(R.id.isDealer);
                 SisDealer.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
