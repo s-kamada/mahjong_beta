@@ -7,4 +7,12 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/Activity_calcScore"
+        android:orderInCategory="100"
+        android:title="calcScore"/>
+    <item
+        android:id="@+id/Activity_calcHand"
+        android:orderInCategory="100"
+        android:title="calcHand"/>
 </menu>

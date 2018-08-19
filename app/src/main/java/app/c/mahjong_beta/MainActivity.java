@@ -1,5 +1,6 @@
 package app.c.mahjong_beta;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //ツールバーをセット
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -29,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         final String TAG = "Calcscore";
         /* TODO 手牌を入力すると点数計算までしてくれる状態にする
          *　中目標：手牌を入力するフォーム？を作る
-         *　小目標：とりあえず牌の素材を入手する
-         *  BUGFIX:exportコマンドが動かない not a valid identifier
+         *　小目標：牌とコードの相互関係を作る
+         * 小目標：画面遷移をつくる
+         * TODO:メニューボタンの画面遷移する動作を設定する
+         *  BUGFIX:ターミナルのexportコマンドが動かない not a valid identifier
          */
 
 //        Spinner Sfu = (Spinner)findViewById(R.id.fu);
@@ -75,14 +79,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) { //メニューアイテムを表示させるメソッド
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) { //メニューアイテムを押した時の動作を定義するメソッド
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -90,9 +94,12 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(this,HandActivity.class);
+            intent.putExtra("hoge","hoge");
+            startActivity(intent);
         }
+        return true;
 
-        return super.onOptionsItemSelected(item);
+//        return super.onOptionsItemSelected(item);
     }
 }

@@ -3,6 +3,44 @@
     <string name="action_settings">Settings</string>
     <string name="button_calcscore">calcScore</string>
     <string name="IsDealer">IsDealer:親ならon</string>
+    <string name="m1">1萬</string>
+    <string name="m2">2萬</string>
+    <string name="m3">3萬</string>
+    <string name="m4">4萬</string>
+    <string name="m5">5萬</string>
+    <string name="m6">6萬</string>
+    <string name="m7">7萬</string>
+    <string name="m8">8萬</string>
+    <string name="m9">9萬</string>
+    <string name="m5r">赤5萬</string>
+    <string name="s1">1索</string>
+    <string name="s2">2索</string>
+    <string name="s3">3索</string>
+    <string name="s4">4索</string>
+    <string name="s5">5索</string>
+    <string name="s6">6索</string>
+    <string name="s7">7索</string>
+    <string name="s8">8索</string>
+    <string name="s9">9索</string>
+    <string name="s5r">赤5索</string>
+    <string name="p1">1筒</string>
+    <string name="p2">2筒</string>
+    <string name="p3">3筒</string>
+    <string name="p4">4筒</string>
+    <string name="p5">5筒</string>
+    <string name="p6">6筒</string>
+    <string name="p7">7筒</string>
+    <string name="p8">8筒</string>
+    <string name="p9">9筒</string>
+    <string name="p5r">赤5筒</string>
+    <string name="zton">東</string>
+    <string name="znan">南</string>
+    <string name="zsha">西</string>
+    <string name="zpei">北</string>
+    <string name="zhak">白</string>
+    <string name="zhat">發</string>
+    <string name="zchu">中</string>
+
 
     <string-array name="fan">
         <item>1</item>
